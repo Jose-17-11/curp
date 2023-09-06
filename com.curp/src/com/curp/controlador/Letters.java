@@ -39,17 +39,4 @@ public class Letters {
 		}
 		return decition;
 	}
-	
-	/*
-	  	String [] stop = {"Aceituno", "Amilcar", "Aguinaldo", "All Power", "Anivdelarev","Batman","Benefecia","Burger King","Cacerolo",
-				"Calzón","Caraciola","Espinaca","Facebook","Fulanito"};
-				
-		String [] stop2 = {"Gordonia","Gorgonio","Harry Potter","Hermione","Hitler","Hurraca","Iluminada","Indio","James Bond","Jorge Nitales",
-				"Lady Di","Marciana","Masiosare","Micheline","Panuncio","Patrocinio","Petronilo","Piritipio","Pocahontas","Pomponio",
-				"Privado","Procopio"};
-				
-		String [] stop3 = {"Rambo","Robocop","Rocky","Rolling Stone","Sobeida","Sol de Sonora","Sonora Querida","Terminator","Twitter",
-				"Usnavy","Verulo","Virgen","Yahoo","Zoila Rosa"}; 
-	 */
-
 }

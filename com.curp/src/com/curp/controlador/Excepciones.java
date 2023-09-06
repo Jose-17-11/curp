@@ -1,7 +1,7 @@
 package com.curp.controlador;
 
 public class Excepciones {
-	
+//	Verifica que en caso de que el usuario deje vacio el input nombre returne b
 	public String nameSpace(String name) {
 		try {
 			if(name.equals("")) {
@@ -28,7 +28,7 @@ public class Excepciones {
         	return "b";
         }	
 	}
-	
+	//Verifica que el mes ingresado se encuentre en un rango de 1 a 12
 	public String month(String mont) {
 		try {
 			int rango = Integer.parseInt(mont);
@@ -45,7 +45,7 @@ public class Excepciones {
 	}
 	
 	
-//	Metodo que verifica que el dia del mes ingresado este dentro del rango de los dias del mes
+//	Metodo que verifica que el dia este en un rango entre 1 a 31
 	public String day(String day) {
 		try {
 			int rango = Integer.parseInt(day);
@@ -61,7 +61,7 @@ public class Excepciones {
         }	
 	}
 	
-//	Metodo que verifica que se hayan ingresado los dias de febrero si el mes seleccionado fue febrero
+//	Metodo que verifica que sel dia este en un rango entre 1 y 28 si se a ingresado el mes de febrero
 	public String febrero(String day, String month) {
 		try {
 			int rango = Integer.parseInt(day);

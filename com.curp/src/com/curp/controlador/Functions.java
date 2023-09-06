@@ -65,7 +65,7 @@ public class Functions{
 			return "b";
 		}
 	}
-//	Metodo que nos extrae la primer letra del nombre
+//	Metodo que nos brindara el cuarto caracter del curp
 	public String nameP(String name) {
 		try {
 			//A base del parametro se crea un array de cadenas para saber si tiene uno o mas nombres
