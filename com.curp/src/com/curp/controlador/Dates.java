@@ -1,4 +1,4 @@
-package com.curp.letters;
+package com.curp.controlador;
 //	Datos que el usuario ingresara: Nombre completo, Apellidos: paterno, materno, dia, mes, año de nacimiento,sexo, estado de nacimiento,
 public class Dates {
 	private String name, apellidoP, apellidoM, day, month, year, gender, state;

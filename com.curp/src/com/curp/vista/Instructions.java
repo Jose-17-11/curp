@@ -79,7 +79,6 @@ public class Instructions extends JFrame{
         		sm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         		sm.setVisible(true);
         		sm.setBounds(600, 10,750,500);
-                
             }
         });
 		

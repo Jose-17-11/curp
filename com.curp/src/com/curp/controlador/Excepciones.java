@@ -1,4 +1,4 @@
-package com.curp.letters;
+package com.curp.controlador;
 
 public class Excepciones {
 	

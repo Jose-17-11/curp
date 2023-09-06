@@ -1,4 +1,4 @@
-package com.curp.letters;
+package com.curp.controlador;
 
 public class Functions{
 //	Analiza si el nombre esta prohibido
@@ -55,23 +55,31 @@ public class Functions{
 	
 //	Este metodo nos brindara el tercer caracter del CURP
 	public String apellidoM(String silabaA) {
-		String apellido = silabaA;
-		char[] array = apellido.toCharArray();
-		char primerLetra = array[0];
-		String resultado = String.valueOf(primerLetra);
-		return resultado;
+		try {
+			String apellido = silabaA;
+			char[] array = apellido.toCharArray();
+			char primerLetra = array[0];
+			String resultado = String.valueOf(primerLetra);
+			return resultado;
+		} catch (ArrayIndexOutOfBoundsException ex) {
+			return "b";
+		}
 	}
 //	Metodo que nos extrae la primer letra del nombre
 	public String nameP(String name) {
-		//A base del parametro se crea un array de cadenas para saber si tiene uno o mas nombres
-		String[] palabras = name.split(" ");
-//		se toma el primer nombre del cual extraeremos el caracter buscado
-		String nameOne = palabras[0]; 
-//		Se toma el primer nombre y se convierte en un array de caracteres
-		char[] array = nameOne.toCharArray();
-//		tomamos el primer caracter del nombre para que lo retorne el metodo
-		String nameletter = String.valueOf(array[0]);
-		return nameletter;
+		try {
+			//A base del parametro se crea un array de cadenas para saber si tiene uno o mas nombres
+			String[] palabras = name.split(" ");
+//			se toma el primer nombre del cual extraeremos el caracter buscado
+			String nameOne = palabras[0]; 
+//			Se toma el primer nombre y se convierte en un array de caracteres
+			char[] array = nameOne.toCharArray();
+//			tomamos el primer caracter del nombre para que lo retorne el metodo
+			String nameletter = String.valueOf(array[0]);
+			return nameletter;
+		} catch (ArrayIndexOutOfBoundsException ex) {
+			return "b";
+		}
 	}
 //	Metodo que nos retorna la silaba del año de nacimiento
 	public String year(String year) {
@@ -83,12 +91,28 @@ public class Functions{
 	
 //	Silaba que nos retornara la letra del sexo
 	public String sexo(String sex) {
-//		El sexo se convierte en un array de caracteres
-		char[] array = sex.toCharArray();
-//		El valor que se retornara sera la primer letra de la palabra ingresada
-		String silaba = String.valueOf(array[0]);
-		
-		return silaba;
+		try {
+			if(sex.equals("HOMBRE") || sex.equals("MUJER") || sex.equals("H") || sex.equals("M")) {
+//				El sexo se convierte en un array de caracteres
+				char[] array = sex.toCharArray();
+//				El valor que se retornara sera la primer letra de la palabra ingresada
+				String silaba = String.valueOf(array[0]);
+				
+				return silaba;
+			}else {
+				return "r";
+			}
+//			
+		} catch (ArrayIndexOutOfBoundsException ex) {
+			return "b";
+		}
+	}
+	
+	public String algoritm() {
+		int num = (int) (Math.random()*9+1);
+		String codigo = "a" + num;
+		codigo = codigo.toUpperCase();
+		return codigo;
 	}
 	
 }

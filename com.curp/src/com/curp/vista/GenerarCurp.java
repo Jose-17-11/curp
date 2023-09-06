@@ -4,11 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-import com.curp.letters.Consonants;
-import com.curp.letters.Dates;
-import com.curp.letters.EntidadesAbreviadas;
-import com.curp.letters.Excepciones;
-import com.curp.letters.Functions;
+import com.curp.controlador.Consonants;
+import com.curp.controlador.Dates;
+import com.curp.controlador.EntidadesAbreviadas;
+import com.curp.controlador.Excepciones;
+import com.curp.controlador.Functions;
 
 	public class GenerarCurp extends JFrame{
 //		Variables que tomaran el valor de los inputs
@@ -52,22 +52,22 @@ import com.curp.letters.Functions;
 		num4 = new JTextField(10);
 		num4.setBounds(220,290,130,30);
 
-		n5 = new JLabel("Dia de nacimiento");
+		n5 = new JLabel("Dia");
 		n5.setBounds(400,100,200,50);
 		num5 = new JTextField(10);
 		num5.setBounds(550,110,130,30);
 
-		n6 = new JLabel("Mes de nacimiento");
+		n6 = new JLabel("Mes");
 		n6.setBounds(400,160,200,50);
 		num6 = new JTextField(10);
 		num6.setBounds(550,170,130,30);
 
-		n7 = new JLabel("Año de nacimiento");
+		n7 = new JLabel("Año");
 		n7.setBounds(400,220,200,50);
 		num7 = new JTextField(10);
 		num7.setBounds(550,230,130,30);
 //
-		n8 = new JLabel("Estado donde nacio");
+		n8 = new JLabel("Estado de nacimiento");
 		n8.setBounds(400,280,200,50);
 		num8 = new JTextField(10);
 		num8.setBounds(550,290,130,30);
@@ -141,7 +141,10 @@ import com.curp.letters.Functions;
 		Excepciones ex = new Excepciones();
 //		Se crea una condicion para evaluar si los nombres ingresados seran permitidos o no
 			if(funcion.name(name) && estado.renapo(state) != "n" 
+					&& funcion.nameP(name) != "b" 
+					&& funcion.apellidoM(apellidoM) != "b" 
 					&& funcion.apellidoP(apellidoP) != "b" 
+					&& funcion.sexo(gender) != "b" && funcion.sexo(gender) != "r" 
 					&& ex.mayor(year) != "r" && ex.mayor(year) != "b" 
 					&& ex.month(month) != "r" && ex.month(month) != "b" 
 					&& ex.day(day) != "r" && ex.day(day) != "b" 
@@ -156,8 +159,9 @@ import com.curp.letters.Functions;
 						estado.renapo(date.getState()) +
 						consonants.apellidos(date.getApellidoP()) +
 						consonants.apellidos(date.getApellidoM()) +
-						consonants.apellidos(date.getName()
-								);
+						consonants.apellidos(date.getName()) +
+						funcion.algoritm()
+						;
 //						Como vimos si se cumple la condicion propuesta imprimira en pantalla el curp
 						res.setText("CURP: " + curp);
 			}else if(!funcion.name(name)) {
@@ -166,8 +170,20 @@ import com.curp.letters.Functions;
 			else if(estado.renapo(state) == "n"){
 				res.setText("El estado: " + state + " no esta permitido");
 			}//En caso de que el año ingresado no sea un caracter numerico mostrara el siguiente texto
+			else if(funcion.nameP(name) == "b") {
+				res.setText("Ingrese un nombre y no deje el apartado vacio");
+			}//En caso de que el año ingresado no sea un caracter numerico mostrara el siguiente texto
 			else if(funcion.apellidoP(apellidoP) == "b") {
-				res.setText("ingrese un apellido paterno y no deje el apartado vacio");
+				res.setText("Ingrese un apellido paterno y no deje el apartado vacio");
+			}
+			else if(funcion.apellidoM(apellidoM) == "b") {
+				res.setText("Ingrese un apellido materno y no deje el apartado vacio");
+			}
+			else if(funcion.sexo(gender) == "r") {
+				res.setText("De favor ngrese en genero: hombre, mujer, h o m");
+			}
+			else if(funcion.sexo(gender) == "b") {
+				res.setText("Ingrese un genero y no deje el apartado vacio");
 			}
 			// En caso de que el año ingresado no este en el rango mostrara el siguiente texto
 			else if(ex.mayor(year) == "r"){

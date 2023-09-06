@@ -1,4 +1,4 @@
-package com.curp.letters;
+package com.curp.controlador;
 public class Letters {
 	
 	public boolean vocals(char vocals) {

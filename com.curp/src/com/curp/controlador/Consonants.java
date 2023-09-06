@@ -1,4 +1,4 @@
-package com.curp.letters;
+package com.curp.controlador;
 
 public class Consonants {
 //	Metodo apellidos que nos genera la consonande de cada apellido y del primer nombre
