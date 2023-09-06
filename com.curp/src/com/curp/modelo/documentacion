@@ -1,0 +1,54 @@
+La curp se genera mediante los siguientes pasos
+
+
+	1. Primer letra del primer apellido y la primer vocal		hecho
+		AI			SO		
+		
+	2. 	Primer letra del segundo apellido						hecho
+		H			G
+		
+	3. Primer letra del sugundo nombre							Falta por terminar
+		M			D
+		
+	4. Dos ultimos digitos del año de nacimiento				hecho
+		00			01
+		
+	5. Digitos que representan el mes de nacimiento				hecho
+		10			12
+	
+	6.	Dia de nacimiento										hecho
+		26			13
+		
+	7. Letra de genero											hecho
+		H			M
+		
+	8. Clave de entidad del estado donde nacio la persona		hecho
+		PL			MS		
+	
+	9. Primer consonante del primer apellido					
+		R			L
+	
+	10. Primer consonante del segundo apellido	
+		R			M
+		
+	11. Primer consonante del nombre
+		N			N		
+	
+
+		AIHM001026HPLRRNA1			SOGD011213MMSLMNA2
+
+
+	Datos que el usuario ingresara: Nombre completo, Apellidos: paterno, materno, dia, mes, año de nacimiento,sexo, estado de nacimiento,
+
+  	Fuente digital:
+	   https://www.tvazteca.com/aztecauno/cuales-nombres-prohibidos-mexico-mda-notas
+	  
+	   Sacar curp:
+	   https://conecta.tec.mx/es/noticias/nacional/emprendedores/que-es-la-curp-descubre-como-se-conforma-y-para-que-sirve
+	  
+	   Normas del curp:
+	   https://www.dof.gob.mx/nota_detalle.php?codigo=5526717&fecha=18/06/2018#gsc.tab=0
+	  
+	   Entidades federativas
+	   https://es.wikipedia.org/wiki/Plantilla:Abreviaciones_de_los_estados_de_M%C3%A9xico
+
